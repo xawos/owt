@@ -86,10 +86,6 @@ def init_db():
                   is_global BOOLEAN,
                   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
                   FOREIGN KEY (user_id) REFERENCES users(id))''')
-    current_allowed_ids = load_allowed_ids_from_db()
-    for user in os.getenv("USER_IDS").split(","):
-        if user not in current_allowed_ids:
-            register_user(int(user), user)
     conn.commit()
     conn.close()
 
