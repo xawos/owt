@@ -1,4 +1,3 @@
-
 <div  align="center">
 <br>
 <a  href="">
@@ -11,7 +10,9 @@
 </p>
 </div>
 
-Shamelessly forked from [Ollama-telegram](https://github.com/ruecat/ollama-telegram), I only added the voice part and couple of things such as preregistering users once they appear in the `.env ` file at bot start.
+Shamelessly forked from [Ollama-telegram](https://github.com/ruecat/ollama-telegram).
+
+I only added the voice part and couple of things such as preregistering users once they appear in the `.env ` file at bot start.
 
 ## Prerequisites
 - [Telegram-Bot Token](https://core.telegram.org/bots#6-botfather)
@@ -28,6 +29,7 @@ pip install -r requirements.txt
 + Enter all values in .env.example as shown in the [original repo](https://github.com/ruecat/ollama-telegram)  for starters.
 
 NB: My fork has 2 additional flags, `WSPRMODEL` and `USE_CUDA`, respectively set to `base` and `True`.
+
 Both those options are meant for [Whisper](https://github.com/openai/whisper), list of models [here](https://github.com/openai/whisper?tab=readme-ov-file#available-models-and-languages). 
   
 + Rename `.env.example` -> `.env` after setting the above options
@@ -38,6 +40,7 @@ Both those options are meant for [Whisper](https://github.com/openai/whisper), l
 python3 run.py
 ```
 If everything went well good job! You can now send voice messages and images to your Telegram bot!
+
 It also works on Raspberry Pi, with [Phi3](https://ollama.com/library/phi3) (without vision) it replies to a voice prompt in ~30s!
 
   
